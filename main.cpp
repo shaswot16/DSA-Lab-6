@@ -1,4 +1,3 @@
-#include <vector>
 #include <iostream>
 #include "Graph.h"
 using namespace std;
@@ -16,15 +15,13 @@ int main(){
     newGraph->addVertex('b');
     newGraph->addVertex('c');
     newGraph->addVertex('d');
-
-
     newGraph->displayVertex();
     newGraph->addEdge('a','b');
-    newGraph->displayEdge();
     newGraph->addEdge('c','d');
-    newGraph->displayVertex();
-
+    
     newGraph->displayEdge();
+    cout<<endl<<"after"<<endl;
+
 
 
 

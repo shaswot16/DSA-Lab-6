@@ -3,19 +3,32 @@
 using namespace std;
 int main()
 {
-	vector<vector<int>> vectGraph;
-	int vertexPosition=1;
+    vector<vector<int>> vectGraph;
+    int vertexPosition = 0;
+    int numberOfRow = 1;
 
-   if (vertexPosition==0){
-        vector<int>one(1,0);
-        vectGraph.push_back(one);
-    }
-    else{
-        for (int i= 0 ;i<vertexPosition;i++){
-            vectGraph[i].push_back(0);
+    for (int x = 0; x < 3; x++)
+    {
+        if (vertexPosition == 0)
+        {
+            vector<int> one(1, 0);
+            vectGraph.push_back(one);
+            vertexPosition++;
         }
-        vector<int>add(vertexPosition,0);
-        vectGraph.push_back(add);
+        else
+        {   
+            //cout<<"gaph size"<<vectGraph.size();
+            for (int i = 0; i < vectGraph.size(); i++)
+            {
+                for (int j = 0; i < numberOfRow; i++)
+                {
+                    vectGraph[i].push_back(0);
+                }
+            }
+            numberOfRow++;
+            vectGraph.push_back(vector<int>(vectGraph.size() + 1, 0));
+            
+        }
     }
     for (int i = 0; i < vectGraph.size(); i++)
     {
@@ -25,7 +38,4 @@ int main()
         }
         cout << endl;
     }
-
-	
-	return 0;
-}	
+}

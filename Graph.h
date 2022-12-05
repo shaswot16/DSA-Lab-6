@@ -28,6 +28,7 @@ private:
     vertex *head;
 
 public:
+    int numberOfRow = 1;
     vertex v;
     vector<vector<int>> vectGraph;
     Graph(bool directed)
