@@ -39,12 +39,14 @@ public:
     bool isDirected();
     void addVertex(char newVertex);
     void addEdge(char fromVertex, char toVertex);
-    void removeEdge();
-    int numEdges();
-    int outdegree();
+    void removeEdge(char vertex);
+    void numOfEdges(char vertex);
+    int outDegree(char vertex);
+    int inDegree(char vertex);
     char neighbours();
     void displayVertex();
     void displayEdge();
+    vertex* returnVertex(char vertex);//Returns the pointer to the vertex after giving the character/name of vertex
 
 };
 

@@ -20,11 +20,31 @@ int main(){
     newGraph->addEdge('c','d');
     
     newGraph->displayEdge();
-    cout<<endl<<"after"<<endl;
+    
+    int oDegree=newGraph->outDegree('c');
+    cout<<"OutDegree of c is "<< oDegree<<endl;
+
+    int iDegree=newGraph->inDegree('d');
+    cout<<"Indegree of d is "<< iDegree<<endl;
+
+    newGraph->numOfEdges('d');
+
+    newGraph->removeEdge('a');
+    cout<<endl;
+    newGraph->displayEdge();
+
+    newGraph->addVertex('e');
+    newGraph->displayEdge();
+
+    newGraph->addEdge('c','e');
+    newGraph->addEdge('b','d');
+    newGraph->addEdge('b','c');
+    newGraph->addEdge('e','d');
+
+    newGraph->displayEdge();
+    newGraph->numOfEdges('c');
 
 
-
-
-
+    
 
 }
